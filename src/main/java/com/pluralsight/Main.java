@@ -27,5 +27,33 @@ public class Main {
         System.out.println("Float: " + floatNumber + " Double: " + doubleNumber + " BigDecimal: "+bigDecimal);
         // double and bigDecimal have small difference than float
         //Float: 20011.273 Double: 20011.090000000135 BigDecimal: 20011.09
+        if (floatNumber == doubleNumber){
+            System.out.println(floatNumber + " is equal to " + doubleNumber);
+        }else if (floatNumber > doubleNumber){
+            System.out.println(floatNumber + " is grater than " + doubleNumber);
+        }else{
+            System.out.println(floatNumber + " is less than " + doubleNumber);
+        }
+        //compare bigDecimal
+        BigDecimal convertedFloat = new BigDecimal(floatNumber);
+        BigDecimal convertedDouble = new BigDecimal(doubleNumber);
+        System.out.println("BigDecimal and Float" + bigDecimal.compareTo(convertedFloat));
+        System.out.println("BigDecimal and Double" + bigDecimal.compareTo(convertedDouble));
+
+        if (bigDecimal.compareTo(convertedFloat) == 0){
+            System.out.println(bigDecimal + " is equal to " + floatNumber);
+        }else if(bigDecimal.compareTo(convertedFloat) < 0){
+            System.out.println(bigDecimal + " is grater than " + floatNumber);
+        }else {
+            System.out.println(bigDecimal + " is les than " + floatNumber);
+        }
+        if (bigDecimal.compareTo(convertedDouble) == 0){
+            System.out.println(bigDecimal + " is equal to " + doubleNumber);
+        }else if(bigDecimal.compareTo(convertedFloat) < 0){
+            System.out.println(bigDecimal + " is grater than " + doubleNumber);
+        }else {
+            System.out.println(bigDecimal + " is les than " + doubleNumber);
+        }
     }
+
 }
